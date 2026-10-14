@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>稚内市青少年科学館 | 北の果てで、星と氷にふれる</title>
+<meta name="description" content="北海道で最も古いプラネタリウムを備える稚内市青少年科学館。南極の氷にさわれる展示、南極観測や北極観測にまつわる資料など、大人も子どもも楽しめる科学館です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0f1b2d; --navy2:#16263d; --gold:#c4a35a; --gold-l:#e3cf9c;
+  --paper:#f4ecda; --paper2:#eadfc4; --ink:#2a2118; --muted:#6b5e4b;
+  --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --en:"Cormorant Garamond","Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--ink);background:var(--paper);line-height:1.95;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.eyebrow{font-family:var(--en);font-style:italic;color:var(--gold);letter-spacing:.3em;font-size:1rem;text-align:center}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);text-align:center;font-weight:600;letter-spacing:.18em;margin:6px 0 14px}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 48px;color:var(--gold)}
+.orn::before,.orn::after{content:"";width:72px;height:1px;background:currentColor}
+.orn i{width:8px;height:8px;background:currentColor;transform:rotate(45deg)}
+.dark .orn{color:var(--gold-l)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:var(--navy);overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url("images/image1.jpg") center/cover,linear-gradient(160deg,#0f1b2d,#243a5c);filter:sepia(.35) contrast(1.02) brightness(.8)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(15,27,45,.35),rgba(15,27,45,.88))}
+.hero .inner{position:relative;z-index:1;padding:40px 24px}
+.hero .frame{display:inline-block;border:1px solid var(--gold);padding:10px;}
+.hero .frame>div{border:1px solid rgba(196,163,90,.5);padding:56px 48px}
+.hero .en{font-family:var(--en);font-style:italic;letter-spacing:.35em;color:var(--gold-l);font-size:1.05rem}
+.hero h1{font-size:clamp(1.9rem,6vw,3.4rem);font-weight:700;letter-spacing:.22em;margin:18px 0 10px;line-height:1.5}
+.hero p{color:#e8dfca;letter-spacing:.2em;font-size:.95rem}
+.since{margin-top:28px;font-family:var(--en);color:var(--gold-l);letter-spacing:.3em}
+
+/* about */
+.about p{max-width:720px;margin:0 auto 1.4em;text-align:justify}
+.about .lead{font-size:1.15rem;text-align:center;line-height:2.2;margin-bottom:2em}
+.about .lead b{color:#8a6d2b;font-weight:600}
+
+/* features */
+.dark{background:var(--navy);color:#efe6d1}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.card{border:1px solid rgba(196,163,90,.55);padding:8px;background:rgba(255,255,255,.02)}
+.card .in{border:1px solid rgba(196,163,90,.25);padding:20px 20px 28px;height:100%}
+.card figure{aspect-ratio:4/3;overflow:hidden;background:var(--navy2);margin-bottom:20px}
+.card figure img{width:100%;height:100%;object-fit:cover;filter:sepia(.28) saturate(.9);transition:transform .8s}
+.card:hover figure img{transform:scale(1.05)}
+.card .no{font-family:var(--en);font-style:italic;color:var(--gold);font-size:1.1rem;letter-spacing:.2em}
+.card h3{font-size:1.2rem;color:var(--gold-l);margin:2px 0 8px;letter-spacing:.12em}
+.card p{font-size:.93rem;color:#d9ceb4}
+
+/* history */
+.history .box{max-width:760px;margin:0 auto;background:var(--paper2);border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-8px;padding:48px 44px;text-align:center}
+.history .year{font-family:var(--en);font-size:3.4rem;color:#8a6d2b;line-height:1;letter-spacing:.08em}
+.history .year small{font-size:1rem;display:block;letter-spacing:.3em;margin-top:6px;color:var(--muted)}
+.history p{margin-top:22px;text-align:justify}
+
+/* reviews */
+.reviews{background:linear-gradient(var(--paper),var(--paper2))}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px}
+.rev{background:#fffaf0;border:1px solid #d8c796;padding:36px 32px;position:relative;box-shadow:0 10px 30px rgba(60,40,10,.08)}
+.rev::before{content:"“";position:absolute;top:-6px;left:18px;font-family:var(--en);font-size:5rem;color:var(--gold);line-height:1}
+.stars{color:#b8902e;letter-spacing:.2em;margin-bottom:12px;font-size:1.1rem}
+.rev p{font-size:.94rem;white-space:pre-line}
+
+/* info */
+.info{max-width:760px;margin:0 auto;border-top:1px solid var(--gold)}
+.row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 8px;border-bottom:1px solid rgba(196,163,90,.5)}
+.row dt{color:var(--gold-l);letter-spacing:.2em}
+.row dd a{color:#fff;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:5px;word-break:break-all}
+.row dd ul{list-style:none}
+.sns{display:inline-flex;align-items:center;gap:10px;text-decoration:none!important}
+.sns span.ic{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--gold-l);transition:.3s}
+.sns:hover span.ic{background:var(--gold);color:var(--navy)}
+.sns svg{width:20px;height:20px}
+
+/* access */
+.mapbox{max-width:900px;margin:0 auto;border:1px solid var(--gold);padding:8px;background:#fffaf0}
+.mapbox iframe{display:block;width:100%;height:420px;border:0;filter:sepia(.25)}
+.addr{text-align:center;margin:28px 0 0}
+.btnwrap{text-align:center;margin-top:20px}
+.btn{display:inline-block;padding:16px 48px;background:var(--navy);color:var(--gold-l);text-decoration:none;border:1px solid var(--gold);letter-spacing:.25em;transition:.3s}
+.btn:hover{background:var(--gold);color:var(--navy)}
+
+footer{background:#0a1320;color:#b9ae94;text-align:center;padding:40px 20px;font-size:.85rem;letter-spacing:.15em}
+footer b{display:block;color:var(--gold-l);font-size:1rem;margin-bottom:6px;letter-spacing:.25em}
+
+@media(max-width:640px){
+  section{padding:68px 0}
+  .hero .frame>div{padding:40px 22px}
+  .row{grid-template-columns:1fr;gap:2px}
+  .history .box{padding:36px 22px}
+  .mapbox iframe{height:320px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="稚内市青少年科学館"></div>
+  <div class="inner">
+    <div class="frame"><div>
+      <div class="en">Wakkanai Science Museum</div>
+      <h1>稚内市<br>青少年科学館</h1>
+      <p>北の果てで、星と氷にふれる。</p>
+      <div class="since">SINCE 1974</div>
+    </div></div>
+  </div>
+</header>
+
+<section class="about">
+  <div class="wrap">
+    <div class="eyebrow">Concept</div>
+    <h2>ここは、学びの原点</h2>
+    <div class="orn"><i></i></div>
+    <p class="lead">日本最北の地、ノシャップ岬のほとりに<br>北海道で最も古い<b>プラネタリウム</b>が、今も静かに星を映します。</p>
+    <p>子どもたちが科学や自然環境、宇宙について体験を通して学べる場所として、半世紀にわたり地域に寄り添ってきた科学館です。南極にまつわる展示や手づくりの実験装置など、どこか懐かしく、あたたかな空気のなかで、大人もゆっくりと知的好奇心に浸れます。</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-l)">Highlights</div>
+    <h2>見どころ</h2>
+    <div class="orn"><i></i></div>
+    <div class="cards">
+      <article class="card"><div class="in">
+        <figure><img src="images/image1.jpg" alt="プラネタリウム" loading="lazy"></figure>
+        <div class="no">No. 01</div>
+        <h3>北海道最古のプラネタリウム</h3>
+        <p>長い歴史を刻んできた投影の時間。北の澄んだ夜空への想いをのせて、星々の世界へ誘います。</p>
+      </div></article>
+      <article class="card"><div class="in">
+        <figure><img src="images/image2.jpg" alt="南極の氷の展示" loading="lazy"></figure>
+        <div class="no">No. 02</div>
+        <h3>南極の氷にさわれる</h3>
+        <p>遠い南極から届いた氷を、実際に手でふれて確かめられる特別な体験。ここでしか出会えない冷たさです。</p>
+      </div></article>
+      <article class="card"><div class="in">
+        <figure><img src="images/image3.jpg" alt="展示室" loading="lazy"></figure>
+        <div class="no">No. 03</div>
+        <h3>手づくりの科学展示</h3>
+        <p>砕氷船の模型や犬ぞり、越冬隊の道具、工夫をこらした体験展示。手づくりの温もりが科学の面白さを伝えます。</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="history">
+  <div class="wrap">
+    <div class="eyebrow">History</div>
+    <h2>創設の背景</h2>
+    <div class="orn"><i></i></div>
+    <div class="box">
+      <div class="year">1974<small>JULY 28 OPEN</small></div>
+      <p>子どもや青少年に科学や自然環境、宇宙について体験的に学べる場を提供し、地域の文化教育の発展を図る目的で、1974年7月28日に道内で7番目の青少年科学館として開館しました。</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Voices</div>
+    <h2>ご来館者の声</h2>
+    <div class="orn"><i></i></div>
+    <div class="rgrid">
+      <blockquote class="rev">
+        <div class="stars" aria-label="5段階中4">★★★★☆</div>
+        <p>水族館と共通券で
+昔子供と北海道を周った時に入って楽しみました
+プラネタリウムが良かった
+去年は一人でツーリングの際に寄りましたが裏に北極観測隊の設備なんかがあって大人でも大変楽しめました</p>
+      </blockquote>
+      <blockquote class="rev">
+        <div class="stars" aria-label="5段階中5">★★★★★</div>
+        <p>観光客にとっては、南極で活躍した砕氷船の模型、犬ぞりの実物、越冬隊の使用した道具などが展示されていて面白いです。
+
+地元の青少年向けと思われる、科学の面白さを教える展示物は、手作り感があって素敵です。
+予算が少ない分、工夫して科学の面白さを伝えようとする熱意を感じました。</p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="info">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-l)">Information</div>
+    <h2>施設案内</h2>
+    <div class="orn"><i></i></div>
+    <dl class="info">
+      <div class="row"><dt>施設名</dt><dd>稚内市青少年科学館</dd></div>
+      <div class="row"><dt>住所</dt><dd>北海道稚内市ノシャップ2丁目2-16</dd></div>
+      <div class="row"><dt>休館日</dt><dd>月曜日・祝日休館<br>4月1日～28日<br>12月1日～翌年1月31日</dd></div>
+      <div class="row"><dt>公式サイト</dt><dd><a href="https://www.city.wakkanai.hokkaido.jp/kagakukan/" target="_blank" rel="noopener">https://www.city.wakkanai.hokkaido.jp/kagakukan/</a></dd></div>
+      <div class="row"><dt>お問い合わせ</dt><dd><a href="https://www.city.wakkanai.hokkaido.jp/inquiry/72.html" target="_blank" rel="noopener">お問い合わせフォーム</a></dd></div>
+      <div class="row"><dt>SNS</dt><dd>
+        <a class="sns" href="https://www.instagram.com/wakkanai_science_museum/" target="_blank" rel="noopener" aria-label="Instagram">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></span>
+        </a>
+      </dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap">
+    <div class="eyebrow">Access</div>
+    <h2>アクセス</h2>
+    <div class="orn"><i></i></div>
+    <div class="mapbox">
+      <iframe title="稚内市青少年科学館の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%E5%8C%97%E6%B5%B7%E9%81%93%E7%A8%9A%E5%86%85%E5%B8%82%E3%83%8E%E3%82%B7%E3%83%A3%E3%83%83%E3%83%97%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%92%E2%88%92%EF%BC%91%EF%BC%96&output=embed&hl=ja"></iframe>
+    </div>
+    <div class="btnwrap">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E7%A8%9A%E5%86%85%E5%B8%82%E9%9D%92%E5%B0%91%E5%B9%B4%E7%A7%91%E5%AD%A6%E9%A4%A8%20%E5%8C%97%E6%B5%B7%E9%81%93%E7%A8%9A%E5%86%85%E5%B8%82%E3%83%8E%E3%82%B7%E3%83%A3%E3%83%83%E3%83%97%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%92%E2%88%92%EF%BC%91%EF%BC%96" target="_blank" rel="noopener">地図を開く</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>稚内市青少年科学館</b>
+  北海道稚内市ノシャップ2丁目2-16
+</footer>
+
+</body>
+</html>
